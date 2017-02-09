@@ -1,0 +1,32 @@
+An Example of a Closure
+
+Two one sentence summaries:
+
+    a closure is one way of supporting first-class functions; it is an expression 
+    that can reference variables within its scope (when it was first declared), 
+    be assigned to a variable, be passed as an argument to a function, or be 
+    returned as a function result. 
+    
+    Or a closure is a stack frame which is allocated when a function starts its 
+    execution, and not freed after the function returns (as if a 'stack frame' 
+    were allocated on the heap rather than the stack!).
+
+The following code returns a reference to a function:
+
+
+function sayHello2(name) {
+  var text = 'Hello ' + name; // Local variable
+  var say = function() { console.log(text); }
+  return say;
+}
+var say2 = sayHello2('Bob');
+say2(); // logs "Hello Bob"
+
+
+
+
+Resources:
+
+1. http://stackoverflow.com/questions/111102/how-do-javascript-closures-work
+2. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+3. http://www.w3schools.com/js/js_function_closures.asp
